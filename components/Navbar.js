@@ -1,4 +1,4 @@
-//components
+//component
 import Searchbar from "./SearchBar/SearchBar";
 
 const Navbar = () => {
@@ -6,10 +6,10 @@ const Navbar = () => {
       <header>
           <div className="navbar container">
                 <div className="logo">Cypto Market</div>
-                <Searchbar placeholder='Search for crypto currency'/>
+                <Searchbar placeholder={'Search for Crypto'}/>
           </div>
       </header>
-  )
+  );
 }
 
 export default Navbar;

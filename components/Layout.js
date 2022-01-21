@@ -1,13 +1,13 @@
 import Head from 'next/head'
 //Components
-import Navbar from './Navbar'
 import Footer from './Footer'
+import Navbar from './Navbar'
 
 const Layout = ({ title, description, children }) => {
 
     return <>
         <Head>
-            {title && <title>{title}</title>}
+            <title>{title?title:'Crypto Market'}</title>
             {description && <meta name='description' content={description} />}
             
             <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -1,14 +1,17 @@
+import {useState} from 'react'
 //Components
 import Layout from '../components/Layout'
+import Navbar from '../components/Navbar'
+import SearchBar from '../components/SearchBar/SearchBar'
 //crypto api calls
-import { getAllCrypto } from '../axios/lib/cryptoAPICalls'
-
+import { getAllCrypto,getCryptoDetails } from '../axios/lib/cryptoAPICalls'
+import axios from 'axios'
 const Index = ({marketData}) => {
-    console.log(marketData)
+
+
     return (
         <Layout>
             <div className='container index'>crypto market</div>
-            
         </Layout>
     )
 }
