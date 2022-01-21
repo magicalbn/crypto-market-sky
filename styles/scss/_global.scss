@@ -8,3 +8,17 @@
 body::-webkit-scrollbar{
     display: none;
 }
+
+.container{
+    padding: 0 10% 0 10%;
+}
+
+
+
+
+#__next{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}

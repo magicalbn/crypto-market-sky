@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 const Index = () =>{
     return (
         <Layout>
-            crypto market
+            <div className='container index'>crypto market</div>
         </Layout>
     )
 }
