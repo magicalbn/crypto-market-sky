@@ -286,4 +286,86 @@ footer button:hover {
 .crypto-list .card .details-more button:hover {
   opacity: 1;
 }
+
+.market {
+  margin: 20px 0;
+}
+
+.market .back {
+  border: 2px solid var(--primary-theme);
+  background-color: var(--primary-theme);
+  opacity: 0.8;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--dark-text);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.market .back:hover {
+  background-color: var(--transparent);
+  color: var(--primary-theme);
+}
+
+.market .error {
+  margin-top: 20px;
+  color: var(--error-color);
+  margin-bottom: 200px;
+}
+
+.market .crypto-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.market .crypto-content img {
+  margin: auto;
+  height: 300px;
+}
+
+.market .details .market-name {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.market .details .details-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.market .details .details-content .left {
+  margin-right: 40px;
+}
+
+.market .details .details-content .left .gross {
+  font-weight: 500;
+}
+
+.market .details .details-content .left .gross.loss {
+  color: var(--error-color);
+}
+
+.market .details .details-content .left .gross.profit {
+  color: var(--stocks-green);
+}
+
+.market .details .details-content p {
+  font-size: 12px;
+  margin: 5px 0;
+  font-weight: light;
+  color: var(--label-color);
+}
+
+.market .details .details-content p .label {
+  color: var(--text-color);
+  font-weight: 500;
+}
 /*# sourceMappingURL=styles.css.map */

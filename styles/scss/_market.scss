@@ -1,0 +1,74 @@
+.market{
+    margin: 20px 0;
+    .back{
+        border: 2px solid var(--primary-theme);
+        background-color: var(--primary-theme);
+        opacity: 0.8;
+        padding: 2px 8px;
+        border-radius: 4px;
+        color: var(--dark-text);
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        
+        &:hover{
+            background-color: var(--transparent);
+            color: var(--primary-theme);
+        }
+        
+    }
+
+    .error{
+        margin-top: 20px;
+        color: var(--error-color);
+        margin-bottom: 200px;
+    }
+
+    .crypto-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        align-items: center;
+
+        img{
+            margin: auto;
+            height: 300px;
+        }
+    }
+
+    .details{
+        .market-name{
+            font-size: 30px;
+            font-weight:600;
+            margin: 10px 0;
+        }
+        .details-content{
+            display: flex;
+            .left{
+                margin-right: 40px;
+                .gross {
+                    font-weight: 500;
+                    &.loss {
+                        color: var(--error-color);
+                    }
+                    &.profit {
+                        color: var(--stocks-green);
+                    }
+                }
+            }
+            p{
+                font-size: 12px;
+                margin: 5px 0;
+                font-weight: light;
+                color: var(--label-color);
+                .label{
+                    color: var(--text-color);
+                font-weight: 500;
+                }
+            }
+           
+            
+        }
+        
+    }
+    
+}

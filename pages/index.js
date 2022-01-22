@@ -26,7 +26,11 @@ const Index = ({ marketData }) => {
     )
 
 
-
+    // const  CryptoNames = []
+    // marketData.forEach(each=>{
+    //     CryptoNames.push(each.MarketName.split('-')[0])
+    // })
+    // console.log(new Set(CryptoNames))
     return (
         <Layout>
             <div className='container index'>
@@ -39,6 +43,7 @@ const Index = ({ marketData }) => {
                         {marketData.length > 0 ? (
                             <>
                                 {marketData.slice(pageStart, pageEnd).map(each => {
+                                   
                                     return (
                                         <Cards key={each.MarketName} cryptoDetails={each} />
                                     )
@@ -46,8 +51,10 @@ const Index = ({ marketData }) => {
                             </>
                         ) : null}
                     </div>
+                    
                     {pagination}
                 </div>
+                
             </div>
         </Layout>
     )
