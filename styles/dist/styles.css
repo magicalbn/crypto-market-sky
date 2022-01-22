@@ -2,7 +2,9 @@
   --primary-theme: #090b3c;
   --text-color: #000;
   --dark-text: #fff;
+  --label-color:rgb(97, 96, 96);
   --secondary-theme: #fd7f09;
+  --transparent: #00000000;
   --error-color: rgb(243, 70, 51);
   --success-color:rgb(26, 107, 1);
   --stocks-green:#44AE68;
@@ -66,8 +68,8 @@ footer button {
   color: var(--dark-text);
   padding: 10px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 footer button:hover {
@@ -94,6 +96,16 @@ footer button:hover {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+
+.navbar .logo:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .navbar .search-bar {
@@ -132,8 +144,8 @@ footer button:hover {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   opacity: 0.8;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .navbar .search-bar button:hover {
@@ -144,5 +156,134 @@ footer button:hover {
   height: 15px;
   width: 15px;
   color: var(--dark-text);
+}
+
+.index {
+  margin-top: 40px;
+}
+
+.index .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 5px 0;
+}
+
+.index .pagination p {
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+.index .pagination button {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: var(--transparent);
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  height: 25px;
+  width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: -2px;
+  border-radius: 50%;
+}
+
+.index .pagination button:hover {
+  cursor: pointer;
+  background-color: rgba(197, 196, 196, 0.582);
+}
+
+.crypto-list .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  padding: 20px 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.crypto-list .card:hover::after {
+  opacity: 1;
+}
+
+.crypto-list .card::after {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background-color: var(--secondary-theme);
+  left: 0;
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.crypto-list .card p {
+  font-size: 13px;
+}
+
+.crypto-list .card .value {
+  font-weight: 600;
+}
+
+.crypto-list .card .label {
+  font-size: 10px;
+  color: var(--label-color);
+}
+
+.crypto-list .card .details-name {
+  margin-left: 10px;
+}
+
+.crypto-list .card .details-current .gross {
+  font-weight: bold;
+}
+
+.crypto-list .card .details-current .gross.loss {
+  color: var(--error-color);
+}
+
+.crypto-list .card .details-current .gross.profit {
+  color: var(--stocks-green);
+}
+
+.crypto-list .card .details-more button {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 0.7;
+  background-color: var(--secondary-theme);
+  border: 2px solid var(--secondary-theme);
+  font-size: 11px;
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--dark-text);
+  cursor: pointer;
+}
+
+.crypto-list .card .details-more button:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */

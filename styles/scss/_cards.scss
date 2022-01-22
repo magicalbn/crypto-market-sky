@@ -1,0 +1,74 @@
+.crypto-list {
+    .card {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        margin: 10px 0;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 5px;
+        padding: 20px 10px;
+
+        position: relative;
+        overflow: hidden;
+        &:hover{
+            &::after{
+                opacity: 1;
+            }
+        }
+        &::after {
+            transition: all 0.3s ease-in;
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 4px;
+            background-color: var(--secondary-theme);
+            left: 0;
+            opacity: 0;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+        .value {
+            font-weight: 600;
+        }
+        .label {
+            font-size: 10px;
+            color: var(--label-color);
+        }
+        .details-name{
+            margin-left: 10px;
+        }
+
+        .details-current {
+            .gross {
+                font-weight: bold;
+                &.loss {
+                    color: var(--error-color);
+                }
+                &.profit {
+                    color: var(--stocks-green);
+                }
+            }
+        }
+        .details-volume {
+        }
+        .details-more {
+            button {
+                transition: all 0.3s ease-in;
+                opacity: 0.7;
+                background-color: var(--secondary-theme);
+                border: 2px solid var(--secondary-theme);
+                font-size: 11px;
+                padding: 5px;
+                border-radius: 5px;
+                color: var(--dark-text);
+                cursor: pointer;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

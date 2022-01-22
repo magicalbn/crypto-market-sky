@@ -21,7 +21,7 @@ footer{
         color: var(--dark-text);
         padding: 10px;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-in;
         &:hover{
             background-color: var(--dark-text);
             color: var(--primary-theme);
