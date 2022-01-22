@@ -1,4 +1,4 @@
-import {getAllCrypto,getCryptoDetails} from '../axios/lib/cryptoAPICalls'
+import {getAllCrypto,getCryptoDetails} from '../../axios/lib/cryptoAPICalls'
 
 describe('Api Calls', () => {
     it("Fetch Market Summaries",async () => {

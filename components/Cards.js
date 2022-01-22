@@ -21,7 +21,7 @@ const Cards = ({cryptoDetails}) => {
             <p className="value">{Ask!=undefined?Ask:'NA'}</p>
             <p className="label">Current (<span className={ netGross<0?'gross loss':'gross profit'}> {netGross}%</span>)</p>
             </div>
-            <div className="details-voulme">
+            <div className="details-volume">
             <p className="value">{ Volume!=undefined ? Volume.toFixed(2): 'NA'}</p>
             <p className="label">Volume</p>
             </div>
