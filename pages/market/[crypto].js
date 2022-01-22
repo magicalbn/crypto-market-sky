@@ -50,7 +50,7 @@ const Crypto = ({ cryptoData, cryptoQuery }) => {
 
                         </div>
                     </div>
-                ) : <p className='error'>Error: No Market Summary found for '{cryptoQuery}' </p>}
+                ) : <p className='error'>Error: No Market Summary found for '{cryptoQuery}'.</p>}
 
             </div>
         </Layout>

@@ -56,7 +56,7 @@ const Index = ({ marketData }) => {
                         {pagination}
                     </div>
 
-                ) : <p className='error'>Error: Some Error occured while retrieving Mart Summaries. Try again late.</p>}
+                ) : <p className='error'>Error: Some Error occured while retrieving Mart Summaries. Try again later.</p>}
 
 
             </div>
