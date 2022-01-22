@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
       <header>
           <div className="navbar container">
-                <div className="logo" onClick={()=>{if(router.pathname!='/'){router.push('/')}}}>Cypto Market</div>
+                <div className="logo" onClick={()=>{if(router.pathname!='/'){router.push('/')}}}><img src="/svg/bitcoin-cash-bch.svg"></img>Cypto Market</div>
                 <Searchbar placeholder={'Search for Crypto . . .'}/>
           </div>
       </header>

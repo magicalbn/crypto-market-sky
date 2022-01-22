@@ -35,26 +35,30 @@ const Index = ({ marketData }) => {
         <Layout>
             <div className='container index'>
                 <h2>Market Summaries</h2>
-                <div className='crypto-table'>
+                {marketData.length > 0 ? (
+                    <div className='crypto-table'>
 
-                    {pagination}
+                        {pagination}
 
-                    <div className='crypto-list'>
-                        {marketData.length > 0 ? (
-                            <>
-                                {marketData.slice(pageStart, pageEnd).map(each => {
-                                   
-                                    return (
-                                        <Cards key={each.MarketName} cryptoDetails={each} />
-                                    )
-                                })}
-                            </>
-                        ) : null}
+                        <div className='crypto-list'>
+                            {marketData.length > 0 ? (
+                                <>
+                                    {marketData.slice(pageStart, pageEnd).map(each => {
+
+                                        return (
+                                            <Cards key={each.MarketName} cryptoDetails={each} />
+                                        )
+                                    })}
+                                </>
+                            ) : null}
+                        </div>
+
+                        {pagination}
                     </div>
-                    
-                    {pagination}
-                </div>
-                
+
+                ) : <p className='error'>Error: Some Error occured while retrieving Mart Summaries. Try again late.</p>}
+
+
             </div>
         </Layout>
     )

@@ -18,8 +18,6 @@ const Crypto = ({ cryptoData, cryptoQuery }) => {
         netGross = ((Ask - PrevDay)/PrevDay*100).toFixed(2) 
     }
 
-    console.log(cryptoQuery)
-    console.log(cryptoData)
 
     return (
         <Layout>
