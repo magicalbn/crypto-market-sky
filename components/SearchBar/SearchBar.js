@@ -9,7 +9,10 @@ const Searchbar = ({placeholder}) => {
     const router = useRouter()
     const onSearch = (e) =>{
         e.preventDefault()
-        router.push(`/market/${searchValue}`)
+        if(searchValue.trim().length<1)
+            return
+        else
+        router.push(`/market/${searchValue.trim()}`)
     }
     return (
         <form className="search-bar" onSubmit={onSearch}>

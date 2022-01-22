@@ -1,9 +1,9 @@
 :root {
   --primary-theme: #090b3c;
+  --secondary-theme: #0ac18e;
   --text-color: #000;
   --dark-text: #fff;
   --label-color:rgb(97, 96, 96);
-  --secondary-theme: #fd7f09;
   --transparent: #00000000;
   --error-color: rgb(243, 70, 51);
   --success-color:rgb(26, 107, 1);
@@ -116,6 +116,10 @@ footer button:hover {
           align-items: center;
 }
 
+.navbar .logo h3 {
+  font-weight: normal;
+}
+
 .navbar .logo img {
   height: 24px;
   width: 24px;
@@ -139,6 +143,7 @@ footer button:hover {
 
 .navbar .search-bar input {
   outline: none;
+  font-size: 12px;
   width: 300px;
   padding: 5px;
   padding-left: 10px;
@@ -175,6 +180,46 @@ footer button:hover {
   height: 15px;
   width: 15px;
   color: var(--dark-text);
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar .logo h3 {
+    font-size: 15px;
+  }
+  .navbar .search-bar {
+    margin-right: 0px;
+  }
+  .navbar .search-bar input {
+    width: 250px;
+    font-size: 10px;
+  }
+  .navbar .search-bar button {
+    height: 26px;
+    width: 40px;
+  }
+  .navbar .search-bar button svg {
+    height: 13px;
+    width: 13px;
+    color: var(--dark-text);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .logo img {
+    height: 40px;
+    width: 40px;
+  }
+  .navbar .logo h3 {
+    display: none;
+  }
+  .navbar .search-bar input {
+    width: 150px;
+  }
 }
 
 .index {
@@ -230,6 +275,12 @@ footer button:hover {
   background-color: rgba(197, 196, 196, 0.582);
 }
 
+@media screen and (max-width: 600px) {
+  .index h2 {
+    font-size: 20px;
+  }
+}
+
 .crypto-list .card {
   display: -ms-grid;
   display: grid;
@@ -243,8 +294,15 @@ footer button:hover {
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 5px;
   padding: 20px 10px;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
   position: relative;
   overflow: hidden;
+}
+
+.crypto-list .card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .crypto-list .card:hover::after {
@@ -252,8 +310,8 @@ footer button:hover {
 }
 
 .crypto-list .card::after {
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3 s ease-in;
+  transition: all 0.3 s ease-in;
   content: "";
   position: absolute;
   height: 100%;
@@ -264,8 +322,12 @@ footer button:hover {
   border-radius: 10px;
 }
 
+.crypto-list .card h3 {
+  font-size: 20px;
+}
+
 .crypto-list .card p {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .crypto-list .card .value {
@@ -273,12 +335,12 @@ footer button:hover {
 }
 
 .crypto-list .card .label {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--label-color);
 }
 
 .crypto-list .card .details-name {
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .crypto-list .card .details-current .gross {
@@ -293,13 +355,17 @@ footer button:hover {
   color: var(--stocks-green);
 }
 
+.crypto-list .card .details-more {
+  text-align: center;
+}
+
 .crypto-list .card .details-more button {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   opacity: 0.7;
   background-color: var(--secondary-theme);
   border: 2px solid var(--secondary-theme);
-  font-size: 11px;
+  font-size: 14px;
   padding: 5px;
   border-radius: 5px;
   color: var(--dark-text);
@@ -308,6 +374,63 @@ footer button:hover {
 
 .crypto-list .card .details-more button:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .crypto-list .card {
+    -ms-grid-columns: 2fr 1fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+  .crypto-list .card p {
+    font-size: 10px;
+  }
+  .crypto-list .card h3 {
+    font-size: 15px;
+  }
+  .crypto-list .card .details-name {
+    margin-left: 10px;
+  }
+  .crypto-list .card .label {
+    font-size: 12px;
+  }
+  .crypto-list .card .details-volume {
+    display: none;
+  }
+  .crypto-list .card .details-more {
+    text-align: center;
+  }
+  .crypto-list .card .details-more button {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .crypto-list .card {
+    -ms-grid-columns: 2fr 1.5fr 1fr;
+        grid-template-columns: 2fr 1.5fr 1fr;
+  }
+  .crypto-list .card p {
+    font-size: 10px;
+  }
+  .crypto-list .card h3 {
+    font-size: 15px;
+  }
+  .crypto-list .card .label {
+    font-size: 10px;
+  }
+  .crypto-list .card .details-name {
+    margin-left: 5px;
+  }
+  .crypto-list .card .details-prev {
+    display: none;
+  }
+  .crypto-list .card .details-more {
+    text-align: end;
+  }
+  .crypto-list .card .details-more button {
+    font-size: 8px;
+    padding: 3px;
+  }
 }
 
 .market {
@@ -359,7 +482,7 @@ footer button:hover {
 }
 
 .market .details .details-content .left {
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 .market .details .details-content .left .gross {
@@ -375,8 +498,8 @@ footer button:hover {
 }
 
 .market .details .details-content p {
-  font-size: 12px;
-  margin: 5px 0;
+  font-size: 16px;
+  margin: 7px 0;
   font-weight: light;
   color: var(--label-color);
 }
@@ -384,5 +507,72 @@ footer button:hover {
 .market .details .details-content p .label {
   color: var(--text-color);
   font-weight: 500;
+}
+
+@media screen and (max-width: 1100px) {
+  .market .crypto-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .market .crypto-content img {
+    margin: auto;
+    height: 250px;
+  }
+  .details {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .market .crypto-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .market .crypto-content img {
+    margin: auto;
+    height: 250px;
+  }
+  .market .details .details-content p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .market .crypto-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: .5fr 1fr;
+        grid-template-rows: .5fr 1fr;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .market .crypto-content img {
+    margin: auto;
+    height: 200px;
+    margin: 40px auto;
+  }
+  .market .details .details-content .left {
+    margin-right: 20px;
+  }
+  .market .details .details-content p {
+    font-size: 13px;
+  }
+  .market .details {
+    margin-left: 0px;
+    margin-bottom: 40px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
