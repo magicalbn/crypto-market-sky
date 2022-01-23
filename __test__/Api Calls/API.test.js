@@ -1,15 +1,15 @@
-import {getAllCrypto,getCryptoDetails} from '../../axios/lib/cryptoAPICalls'
+import { getAllCrypto, getCryptoDetails } from '../../axios/lib/cryptoAPICalls'
 
 describe('Api Calls', () => {
-    it("Fetch Market Summaries",async () => {
+    it("Fetch Market Summaries", async () => {
         const data = await getAllCrypto()
-        expect(data.length>0).toBeTruthy()
-        
+        expect(data.length > 0).toBeTruthy()
+
     })
 
-    it("Fetch Summary for specific Crypto",async () => {
+    it("Fetch Summary for specific Crypto", async () => {
         const data = await getCryptoDetails('btc-ltc')
-        
+
         expect(data.MarketName).toBeTruthy()
         expect(data.BaseVolume).toBeTruthy()
         expect(data.Ask).toBeTruthy()

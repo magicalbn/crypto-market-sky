@@ -25,12 +25,6 @@ const Index = ({ marketData }) => {
         </div>
     )
 
-
-    // const  CryptoNames = []
-    // marketData.forEach(each=>{
-    //     CryptoNames.push(each.MarketName.split('-')[0])
-    // })
-    // console.log(new Set(CryptoNames))
     return (
         <Layout>
             <div className='container index'>

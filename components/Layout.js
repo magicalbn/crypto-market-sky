@@ -7,7 +7,7 @@ const Layout = ({ title, description, children }) => {
 
     return <>
         <Head>
-            <title>{title?title:'Crypto Market'}</title>
+            <title>{title ? title : 'Crypto Market'}</title>
             {description && <meta name='description' content={description} />}
             <link rel="icon" href="/svg/bitcoin-cash-bch.svg" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -4,15 +4,15 @@ import { useRouter } from 'next/router'
 import { IoIosSearch } from 'react-icons/io';
 
 
-const Searchbar = ({placeholder}) => {
+const Searchbar = ({ placeholder }) => {
     const [searchValue, setsearchValue] = useState('')
     const router = useRouter()
-    const onSearch = (e) =>{
+    const onSearch = (e) => {
         e.preventDefault()
-        if(searchValue.trim().length<1)
+        if (searchValue.trim().length < 1)
             return
         else
-        router.push(`/market/${searchValue.trim()}`)
+            router.push(`/market/${searchValue.trim()}`)
     }
     return (
         <form className="search-bar" onSubmit={onSearch}>
@@ -20,6 +20,6 @@ const Searchbar = ({placeholder}) => {
             <button type='submit'><IoIosSearch /></button>
         </form>
     )
-} 
+}
 
 export default Searchbar;

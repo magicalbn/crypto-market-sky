@@ -30,7 +30,7 @@ describe('Crypto Page', () => {
 
     it('should render without crashing when empty object is passed', async () => {
         const object = {}
-        const wrap = mount(<Crypto cryptoData={object} cryptoQuery="test-input"/>)
+        const wrap = mount(<Crypto cryptoData={object} cryptoQuery="test-input" />)
         expect(wrap.find('.error').text()).toBe("Error: No Market Summary found for 'test-input'.")
     })
 

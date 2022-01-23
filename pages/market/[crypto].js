@@ -15,7 +15,7 @@ const Crypto = ({ cryptoData, cryptoQuery }) => {
         createdDate = createdDate.toString().split(' ').slice(1, 5).join(' ')
         timeStamp = new Date(TimeStamp)
         timeStamp = timeStamp.toString().split(' ').slice(1, 5).join(' ')
-        netGross = ((Ask - PrevDay)/PrevDay*100).toFixed(2) 
+        netGross = ((Ask - PrevDay) / PrevDay * 100).toFixed(2)
     }
 
 
@@ -32,7 +32,7 @@ const Crypto = ({ cryptoData, cryptoQuery }) => {
                                 <div className='left'>
 
                                     <p><span className='label'>Created: </span>{createdDate}</p>
-                                    <p><span className='label'>Ask: </span>{Ask} (<span className={ netGross<0?'gross loss':'gross profit'}>{netGross}%</span>)</p>
+                                    <p><span className='label'>Ask: </span>{Ask} (<span className={netGross < 0 ? 'gross loss' : 'gross profit'}>{netGross}%</span>)</p>
                                     <p><span className='label'>Previous day: </span>{PrevDay}</p>
                                     <p><span className='label'>Bid: </span>{Bid}</p>
                                     <p><span className='label'>Timestamp: </span>{timeStamp}</p>

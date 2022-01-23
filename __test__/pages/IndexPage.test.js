@@ -23,8 +23,8 @@ describe('Header Component', () => {
                 "OpenSellOrders": 457,
                 "PrevDay": 0.00093918,
                 "Created": "2019-04-23T17:44:01.423"
-                },
-                {
+            },
+            {
                 "MarketName": "BTC-NIO",
                 "High": 0.00073034,
                 "Low": 0.00073034,
@@ -38,7 +38,7 @@ describe('Header Component', () => {
                 "OpenSellOrders": 2,
                 "PrevDay": 0.00073034,
                 "Created": "2021-04-26T21:32:43.387"
-                }
+            }
         ]
         const wrap = mount(<Index marketData={object} />)
         expect(wrap.find('.pagination').length).toBe(2)
